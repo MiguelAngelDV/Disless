@@ -8,6 +8,8 @@
 
 html {
     font-size: 62.5%;
+    --amarillo
+
     /* 10px */
 }
 
@@ -19,4 +21,13 @@ body {
     padding: 3rem;
     
     box-sizing: border-box;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, ), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
