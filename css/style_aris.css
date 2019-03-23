@@ -33,7 +33,7 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.aux{
+.aux {
     z-index: -1;
     width: 95vw;
     height: 20vh;
@@ -50,7 +50,7 @@ body {
     background-color: #f7f7f7;
 }
 
-.section-intro{
+.section-intro {
     width: 60%;
     height: 100%;
     display: flex;
@@ -58,18 +58,18 @@ body {
     justify-content: center;
 }
 
-.section-intro>p{
+.section-intro>p {
     width: 90%;
     font-size: 1.6rem;
 }
 
-.section-line{
+.section-line {
     height: 70%;
     width: .3rem;
     background-color: #707070;
 }
 
-.section-photo{
+.section-photo {
     height: 100%;
     flex-grow: 1;
     display: flex;
@@ -77,7 +77,7 @@ body {
     align-items: center;
 }
 
-.section-photo-img{
+.section-photo-img {
     height: 28rem;
     width: 24rem;
     background-image: url(../img/dyslexia.jpg);
@@ -99,6 +99,7 @@ body {
     position: absolute;
     top: 5rem;
     left: 5rem;
+    animation: moveInLeft 3s ease-out;
 }
 
 .logo {
@@ -220,4 +221,108 @@ body {
 .btn-animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
+}
+
+.login-sec {
+    height: 95vh;
+    width: 95vw;
+    background-color: #f7f7f7;
+    display: flex;
+}
+
+.login-sec-60 {
+    height: 100%;
+    width: 60%;
+    background-color: green;
+    background-image: linear-gradient(to right bottom, rgba(250, 112, 112, 0.8), rgba(27, 73, 211, 0.8)), url(../img/room2.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo2-box {
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveInLeft 3s ease-out;
+}
+
+.logo2 {
+    height: 10rem;
+}
+
+.login-sec-40 {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-sec-40-title{
+    animation: moveInRight 3s ease-out;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.login-sec-40-title-p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-sec-40-title-p-1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1.8rem;
+}
+
+.login-sec-40-title-p-2{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+}
+
+.login-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form>input {
+    width: 90%;
+    border: none;
+    background-color: white;
+    outline: none;
+    border: 1px solid #FA7071;
+    border-radius: 10rem;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.login-form>input[type="submit"]{
+    background-color: #3b49d3;
+    font-weight: 400;
+    border: none;
+    width: 40%;
+    color: white;
+}
+
+.login-form>input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .6rem 2rem rgba(0, 0, 0, .2);
+}
+
+.login-form>input[type="submit"]:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
 }
