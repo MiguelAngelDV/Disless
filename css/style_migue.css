@@ -112,3 +112,28 @@ body{
     font-weight: bold;
     color: var(--blanco);
 }
+
+/* Card Options */
+.options-card{
+    width: 80%;
+    height: 80%;
+    font-family: Montserrat;
+    color: var(--blanco);
+}
+
+.option{
+    width: 100%;
+    height: calc(100% / 5);
+    background-color: var(--azul);
+    border-bottom: 1px solid var(--blanco);
+    font-size: 1.5rem;
+}
+.option:last-child{
+    border-bottom: none;
+}
+
+.option:hover{
+    color: var(--azul);
+    background-color: var(--blanco);
+    cursor: pointer;
+}
