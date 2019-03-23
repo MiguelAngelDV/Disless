@@ -1,0 +1,20 @@
+
+.contenedor{
+    text-align:center;
+}
+input{
+    width:200px;
+    height:30px;
+    border: 1px solid coral;
+    border-radius:10px;
+    text-align:center;
+    font-size:20px;
+}
+p{
+    font-size: 2rem;       
+}
+#enviar{
+    position:absolute;
+    left:520px;
+    bottom:100px !important;
+}

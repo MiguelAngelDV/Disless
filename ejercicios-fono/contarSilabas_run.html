@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/flexbox.css">
     <link rel="stylesheet" href="../css/ejercicios.css">
+    <link rel="stylesheet" href="../css/juan.css">
     
 </head>
 <body>
-<section class="section flex-column">
+<section class="section flex-columns">
     <div class="header flex-row">
         <div class="logo">
             <img src="../img/logo.png">
@@ -20,28 +21,31 @@
             <h2>Ejercicios de conciencia fonologica y semantica.</h2>
         </div>
     </div>
-    
-    <div id="contenedor">
-
+       
+    <div class="contenedor" id="contenedor">
     </div>
-
+    <input id="enviar" type="submit" value="Revisar" onclick="revisar()">
 </section>
 
 <script defer>
 function getContarSilabas(){
      document.getElementById("contenedor").innerHTML ="";
     var	http = new XMLHttpRequest(); 
-    http.open("GET","http://127.20.10.10:3000/user/getExercisesByCategory/Cuenta las sílabas",true);    
+    http.open("GET","http://172.20.10.10:3000/user/getExercisesByCategory/Cuenta las sílabas",true);    
     http.send();   
-    http.onreadystatechange = function (){        
+    http.onreadystatechange = function (){    
+        
 		if (http.readyState == 4 && http.status == 200) {                                    
-            var respuesta = JSON.parse(this.responseText);                        
+            var respuesta = JSON.parse(this.responseText);  
+            var con = 0;
             respuesta.forEach((ejercicio)=>{
                 document.getElementById("contenedor").innerHTML+="<h3>"+ejercicio.exerciseName+"</h3><br>";
                 ejercicio.questions.forEach((ques)=>{                    
-                    document.getElementById("contenedor").innerHTML+="<li>"+ques.question+"</li><br>";
-                    
+                    document.getElementById("contenedor").innerHTML+="<p>"+ques.question+"</p><br>";
+                    document.getElementById("contenedor").innerHTML+="<input type'number' id='"+con+"' res='"+ques.answer+"'required><br>";                    
+                    con++;
                 });
+                
             })                             
         }
     }
@@ -50,7 +54,64 @@ function getContarSilabas(){
 
 getContarSilabas();
 
+document.getElementById("enviar").addEventListener('click',function(){
+    var contador=0;
+    if(document.getElementById("0").value == document.getElementById("0").getAttribute("res")){
+        document.getElementById("0").style.background="green";
+        document.getElementById("0").style.color="white";
+        contador++;
+        
+    }else{
+        document.getElementById("0").style.background="red";
+        document.getElementById("0").style.color="white";
+    }
+
+    if(document.getElementById("1").value == document.getElementById("1").getAttribute("res")){
+        document.getElementById("1").style.background="green";
+        document.getElementById("1").style.color="white";
+        contador++;
+    }else{
+        document.getElementById("1").style.background="red";
+        document.getElementById("1").style.color="white";
+    }
+
+    if(document.getElementById("2").value == document.getElementById("2").getAttribute("res")){
+        document.getElementById("2").style.background="green";
+        document.getElementById("2").style.color="white";
+        contador++;
+    }else{
+        document.getElementById("2").style.background="red";
+        document.getElementById("2").style.color="white";
+    }
+
+
+    if(document.getElementById("3").value == document.getElementById("3").getAttribute("res")){
+        document.getElementById("3").style.background="green";
+        document.getElementById("3").style.color="white";
+        contador++;
+    }else{
+        document.getElementById("3").style.background="red";
+        document.getElementById("3").style.color="white";
+    }
+    if(document.getElementById("4").value == document.getElementById("4").getAttribute("res")){
+        document.getElementById("4").style.background="green";
+        document.getElementById("4").style.color="white";
+        contador++;
+    }else{
+        document.getElementById("4").style.background="red";
+        document.getElementById("4").style.color="white";
+    }
+    
+    if(contador == 5){
+        alert("Has contestado todo correctamente");
+    }else{
+        alert("Parece que tienes algunos erores");
+    }
+});
+
 </script>
+
+
 
 
 </body>
