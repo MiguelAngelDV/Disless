@@ -26,43 +26,79 @@ body {
 
 .header {
     height: 95vh;
+    width: 95vw;
     background-image: linear-gradient(to right bottom, rgba(244, 230, 27, 0.8), rgba(250, 112, 112, 0.8)), url(../img/room.jpg);
     background-size: cover;
     background-position: top;
-    position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.aux{
+    z-index: -1;
+    width: 95vw;
+    height: 20vh;
+    background-color: #f7f7f7;
+    padding: 1rem 0;
+    margin-top: -20vh;
 }
 
 .section {
     height: 95vh;
+    width: 95vw;
     display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
 }
 
 .section-intro{
     width: 60%;
-    background-color: aqua;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-intro>p{
+    width: 90%;
+    font-size: 1.6rem;
+}
+
+.section-line{
+    height: 70%;
+    width: .3rem;
+    background-color: #707070;
 }
 
 .section-photo{
+    height: 100%;
     flex-grow: 1;
-    background-color: #3b49d3;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .section-photo-img{
-    height: 60%;
-    width: 60%;
+    height: 28rem;
+    width: 24rem;
     background-image: url(../img/dyslexia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.section-photo-img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .6rem 2rem rgba(0, 0, 0, .2);
+}
+
+.section-photo-img:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
+}
+
 .logo-box {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 5rem;
+    left: 5rem;
 }
 
 .logo {
