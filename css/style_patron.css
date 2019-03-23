@@ -236,3 +236,15 @@ body {
     border-radius: 20px;
     border:none;
 }
+
+.container2{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+}
+
+#subTitle{
+    display: none;
+    background-color: red;
+    
+}
