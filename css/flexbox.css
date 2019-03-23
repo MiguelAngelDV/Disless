@@ -43,6 +43,12 @@ body, html{
     justify-content: start;
 }
 
+.flex-start-align{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .flex-end{
     display: flex;
     justify-content: flex-end;

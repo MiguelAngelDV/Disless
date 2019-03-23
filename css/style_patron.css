@@ -1,4 +1,3 @@
-
 *,
 *::after,
 *::before {
@@ -6,6 +5,7 @@
     padding: 0px;
     box-sizing: inherit;
 }
+
 :root{
     --amarillo: #F4E61B;
     --azul: #3b49d3;
@@ -13,6 +13,7 @@
     --negro: #070707;
     --blanco: #FFF;
 }
+
 html {
     font-size: 62.5%;
     width: 100%;
@@ -27,57 +28,82 @@ html {
 
 body{
     background-color: var(--blanco);
-    font-family: "Lato", sans-serif;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.home{
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
 .header{
-    width: 100vw;
-    height: 7rem;
-    background-color: green;
+    width: 100%;
+    height: 6rem;
+    background-image: linear-gradient(rgba(250, 112, 112, 0.8), rgba(250, 112, 112, 0.8)), url(../img/pencil.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
+
 .logo-header{
-    width: 20vw;
+    width: 20%;
     height: 100%;
-    padding: 10px;
     box-sizing: border-box;
-    /* background-color: var(--negro); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-header-content{
+    height: 100%;
+    flex-grow: 1;
 }
 
 .menu{
-    width: 5rem;
-    height: 5rem;
-    filter: contrast(0%);
-    /* margin-left: 40px; */
-    margin-left: 15%;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
+}
+
+.menu:hover {
+    transform: translateY(-3px);
 }
 
 .menu-content{
     display: none;
 }
 
-.titulo-header
-{
+.titulo-header{
     width: 65%;
     height: 100%;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulo{
+    color: white;
+    display: flex;
     align-items: center;
-}
-
-.title{
-
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
 }
 
 .logo{
-    width: 10rem;
+    width: 8rem;
     height: auto;
-    margin-left: 10px;
 }
 
 .lema-header{
-    background-color: brown;
     width: 15%;
     height: 100%;
     box-sizing: border-box;
@@ -85,7 +111,7 @@ body{
 
 
 .lema{
-    width: 80vw;
+    width: 80%;
     height: 100%;
     /* background-color: var(--amarillo); */
 }
@@ -107,11 +133,15 @@ body{
 }
 .card-cat{
     width: 80%;
-    height: 80%;
+    height: 90%;
     font-family: Montserrat;
     background-color: var(--amarillo);
-    box-shadow: 2px -2px 55px -10px rgba(10,10,10,1);
     border-radius: 10px;
+}
+
+.card-cat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .6rem 2rem rgba(0, 0, 0, .2);
 }
 
 .header-card{

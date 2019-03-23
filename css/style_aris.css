@@ -233,7 +233,6 @@ body {
 .login-sec-60 {
     height: 100%;
     width: 60%;
-    background-color: green;
     background-image: linear-gradient(to right bottom, rgba(250, 112, 112, 0.8), rgba(27, 73, 211, 0.8)), url(../img/room2.jpg);
     background-size: cover;
     background-position: top;
