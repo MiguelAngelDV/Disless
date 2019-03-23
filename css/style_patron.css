@@ -6,7 +6,7 @@
     box-sizing: inherit;
 }
 
-:root{
+:root {
     --amarillo: #F4E61B;
     --azul: #3b49d3;
     --rosa: #FA7071;
@@ -22,11 +22,11 @@ html {
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url(../css/Montserrat-Medium.otf);
+    font-family: Montserrat;
+    src: url(../css/Montserrat-Medium.otf);
 }
 
-body{
+body {
     background-color: var(--blanco);
     font-family: "Montserrat";
     display: flex;
@@ -34,7 +34,7 @@ body{
     align-items: center;
 }
 
-.home{
+.home {
     height: 95vh;
     width: 95vw;
     display: flex;
@@ -42,9 +42,10 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #f7f7f7;
+    z-index: 0;
 }
 
-.header{
+.header {
     width: 100%;
     height: 6rem;
     background-image: linear-gradient(rgba(250, 112, 112, 0.8), rgba(250, 112, 112, 0.8)), url(../img/pencil.jpg);
@@ -52,7 +53,7 @@ body{
     background-position: bottom;
 }
 
-.logo-header{
+.logo-header {
     width: 20%;
     height: 100%;
     box-sizing: border-box;
@@ -61,12 +62,12 @@ body{
     align-items: center;
 }
 
-.logo-header-content{
+.logo-header-content {
     height: 100%;
     flex-grow: 1;
 }
 
-.menu{
+.menu {
     width: 4rem;
     height: 4rem;
     cursor: pointer;
@@ -76,11 +77,11 @@ body{
     transform: translateY(-3px);
 }
 
-.menu-content{
+.menu-content {
     display: none;
 }
 
-.titulo-header{
+.titulo-header {
     width: 65%;
     height: 100%;
     display: flex;
@@ -88,7 +89,7 @@ body{
     justify-content: center;
 }
 
-.titulo{
+.titulo {
     color: white;
     display: flex;
     align-items: center;
@@ -98,40 +99,41 @@ body{
     letter-spacing: 2rem;
 }
 
-.logo{
+.logo {
     width: 8rem;
     height: auto;
 }
 
-.lema-header{
+.lema-header {
     width: 15%;
     height: 100%;
     box-sizing: border-box;
 }
 
-
-.lema{
+.lema {
     width: 80%;
     height: 100%;
     /* background-color: var(--amarillo); */
 }
 
-.container{
+.container {
     width: 100vw;
     height: calc(100% - 7rem);
 }
 
-.container-cards{
+.container-cards {
     height: 90%;
     width: 80vw;
     /* background-color: var(--azul); */
     /* box-shadow: 2px -2px 55px -10px rgba(10,10,10,1); */
 }
-.cat{
+
+.cat {
     height: 100%;
     width: 50%;
 }
-.card-cat{
+
+.card-cat {
     width: 80%;
     height: 90%;
     font-family: Montserrat;
@@ -144,7 +146,7 @@ body{
     box-shadow: 0 .6rem 2rem rgba(0, 0, 0, .2);
 }
 
-.header-card{
+.header-card {
     width: 100%;
     height: 20%;
     font-weight: 200;
@@ -155,7 +157,7 @@ body{
     box-sizing: border-box;
 }
 
-.card-content{
+.card-content {
     width: 100%;
     height: 60%;
     padding: 5% 5% 0px 5%;
@@ -166,12 +168,12 @@ body{
     font-size: 1.5rem;
 }
 
-.footer-card{
+.footer-card {
     width: 100%;
     height: 20%;
 }
 
-.button-card{
+.button-card {
     height: 40px;
     width: 200px;
     border-radius: 15px;
@@ -181,8 +183,45 @@ body{
     cursor: pointer;
 }
 
-.button-card:hover{
+.button-card:hover {
     background-color: var(--azul);
     font-weight: bold;
     color: var(--blanco);
+}
+
+.menu-list-div{
+    height: 95vh;
+    width: 95vw;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu-list{
+    position: absolute;
+    height: calc(100% - 6.4rem);
+    width: 30rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 .6rem 2rem rgba(0, 0, 0, .2);
+}
+
+.list-item{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.line2{
+    width: 70%;
+    height: .2rem;
+    background-color: #707070;
 }

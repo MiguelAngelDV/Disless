@@ -1,8 +1,8 @@
-function menuButton()
-{
-    document.getElementById("menu").style.display="initial";
-    console.log("Hola");
-    // button.style.display="inline";
+function menuButton(){
+    var lista = document.getElementById("list");
+    lista.style.display = lista.style.display === 'none' ? 'flex' : 'none';    
+}
 
-
+function test(){
+    alert("si jala");
 }
