@@ -105,6 +105,7 @@ body{
     background-color: var(--rosa);
     color: var(--negro);
     cursor: pointer;
+    outline: none;
 }
 
 .button-card:hover{
