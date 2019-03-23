@@ -22,7 +22,7 @@
         </div>
     </div>
        
-    <div class="contenedor" id="contenedor">
+    <div class="contenedor flex-column" id="contenedor">
     </div>
     <input id="enviar" type="submit" value="Revisar" onclick="revisar()">
 </section>
@@ -39,7 +39,7 @@ function getContarSilabas(){
             var respuesta = JSON.parse(this.responseText);  
             var con = 0;
             respuesta.forEach((ejercicio)=>{
-                document.getElementById("contenedor").innerHTML+="<h3>"+ejercicio.exerciseName+"</h3><br>";
+                // document.getElementById("contenedor").innerHTML+="<h3>"+ejercicio.exerciseName+"</h3><br>";
                 ejercicio.questions.forEach((ques)=>{                    
                     document.getElementById("contenedor").innerHTML+="<p>"+ques.question+"</p><br>";
                     document.getElementById("contenedor").innerHTML+="<input type'number' id='"+con+"' res='"+ques.answer+"'required><br>";                    
