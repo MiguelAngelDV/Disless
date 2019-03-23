@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lectura Palabra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/flexbox.css">
+    <link rel="stylesheet" href="../css/ejercicios.css">
+    <!-- <script defer src="main.js"></script> -->
+    <!-- <script src="../js/peticiones.js"></script> -->
+</head>
+<body>
+<section class="section flex-column">
+    <div class="header flex-row">
+        <div class="logo">
+            <img src="../img/logo.png">
+        </div>
+        <div class="categoria center">
+            <h2>Ejercicios de conciencia fonologica y semantica.</h2>
+        </div>
+    </div>
+    <div id="contenedor">
+
+    </div>
+</section>
+</body>
+<script defer>
+    function getLecturaPalabras(){
+        console.log("entra")
+        // document.getElementById("contenedor").innerHTML = " ";
+        var	http = new XMLHttpRequest();
+        http.open("GET","http://172.20.10.10:3000/user/getExercisesByCategory/Lectura de palabras",true);
+        http.send();
+        http.onreadystatechange = function (){ 
+            console.log("jo")
+            var container = document.getElementById("contenedor"),
+                tarjeta = document.createElement("div");
+                container.classList.add("center");
+                tarjeta.classList.add("tarjeta");
+                tarjeta.classList.add("flex-column");
+            if (http.readyState == 4 && http.status == 200) {                                    
+                var respuesta = JSON.parse(this.responseText);
+                console.log(respuesta);                     
+                respuesta.forEach((ejercicio)=>{
+                    ejercicio.questions.forEach((ques)=>{
+                        var pregunta = document.createElement("div"),
+                            txtNode = document.createTextNode("Escoge la palabra correcta:"),
+                            p = document.createElement("p");
+                            p.appendChild(txtNode);
+                            pregunta.appendChild(p);
+                            pregunta.classList.add("center");
+                            pregunta.classList.add("pregunta");
+                        var containerPreguntas = document.createElement("div"),
+                            op1 = document.createElement("div"),
+                            op2 = document.createElement("div");
+                            op1Txt = document.createTextNode(ques.options[0]);
+                            op2Txt = document.createTextNode(ques.options[1]);
+                        var opP1 = document.createElement("p"),
+                            opP2 = document.createElement("p");
+
+                            opP1.appendChild(op1Txt);
+                            opP2.appendChild(op2Txt);
+
+                            op1.appendChild(opP1);
+                            op2.appendChild(opP2);
+                        
+                        containerPreguntas.appendChild(op1);
+                        containerPreguntas.appendChild(op2);
+                        containerPreguntas.classList.add("flex-row");
+                        op1.classList.add("center");
+                        op1.classList.add("opcion");
+                        op2.classList.add("center");
+                        op2.classList.add("opcion");
+                        tarjeta.appendChild(pregunta);
+                        tarjeta.appendChild(containerPreguntas);
+                        
+
+                        //console.log(ques.options[0]);
+                        // document.getElementById("contenedor").innerHTML+="<h3>"+ques+"</h3>";
+                        //ques.options.forEach((opt)=>{
+                            //console.log(opt);
+                            // document.getElementById("contenedor").innerHTML+="<h3>"+opt+"</h3>";
+                        //});
+                    });
+                    container.appendChild(tarjeta);
+                });                             
+            }
+            
+        }
+    }
+    getLecturaPalabras();
+
+</script>
+<style>
+    .tarjeta{
+        width: 80%;
+        height: 80%;
+        background-color: bisque;
+    }
+
+    .pregunta{
+        width: 100%;
+        height: 50%;
+    }
+
+    .opcion{
+        width: 50%;
+        height: 3rem;
+    }
+</style>
+</html>

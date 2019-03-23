@@ -136,3 +136,14 @@ body{
     transform: translateY(-1px);
     box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
 }
+
+#contenedor{
+    width: 90%;
+    height: 90%;
+}
+
+.pregunta>p{
+    font-size: 2rem;
+    height: 3rem;
+    width: 8rem;
+}

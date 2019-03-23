@@ -38,7 +38,7 @@ function getLecturaPalabras(){
             })                             
         }
     }
-    http.open("GET","user/getExercisesByCategory/Lectura de palabras",true);    
+    http.open("GET","http://192.168.43.41:3000/user/getExercisesByCategory/Lectura de palabras",true);    
     http.send();
 }
 
