@@ -13,6 +13,15 @@ function startDiagnosis(){
     instrucciones.style.display="none";
     instrucciones2.style.display="none";
 
-    var subtitulo = document.getElementById("subTitle");
-    subtitulo.style.display="initial";
+    var subtitulo = document.getElementById("container2");
+    subtitulo.style.display="flex";
 }
+
+function myFunction() {
+    myVar = setTimeout(alertFunc, 3000);
+  }
+  
+
+  document.getElementById("musica").addEventListener('play',function(){
+      document.getElementById("musica").load(),15000
+  });
