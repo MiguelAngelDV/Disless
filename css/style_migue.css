@@ -13,12 +13,16 @@
     --negro: #070707;
     --blanco: #FFF;
 }
-
 html {
     font-size: 62.5%;
     width: 100%;
     height: 100%;
     /* 10px */
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../css/Montserrat-Medium.otf);
 }
 
 body{
@@ -50,7 +54,8 @@ body{
 .container-cards{
     height: 90%;
     width: 80vw;
-    background-color: var(--azul);
+    /* background-color: var(--azul); */
+    /* box-shadow: 2px -2px 55px -10px rgba(10,10,10,1); */
 }
 .cat{
     height: 100%;
@@ -59,14 +64,51 @@ body{
 .card-cat{
     width: 80%;
     height: 80%;
+    font-family: Montserrat;
     background-color: var(--amarillo);
+    box-shadow: 2px -2px 55px -10px rgba(10,10,10,1);
+    border-radius: 10px;
 }
 
 .header-card{
     width: 100%;
     height: 20%;
+    font-weight: 200;
+    color: var(--negro);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2%;
+    box-sizing: border-box;
 }
 
 .card-content{
-    
+    width: 100%;
+    height: 60%;
+    padding: 5% 5% 0px 5%;
+    box-sizing: border-box;
+    text-align: justify;
+    font-weight: 100;
+    color: var(--negro);
+    font-size: 1.5rem;
+}
+
+.footer-card{
+    width: 100%;
+    height: 20%;
+}
+
+.button-card{
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--rosa);
+    color: var(--negro);
+    cursor: pointer;
+}
+
+.button-card:hover{
+    background-color: var(--azul);
+    font-weight: bold;
+    color: var(--blanco);
 }
