@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contar Silabas</title>
+    <title>Lectura Cronometrada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/flexbox.css">
     <link rel="stylesheet" href="../css/ejercicios.css">
-    
+    <script defer src="main.js"></script>
 </head>
 <body>
 <section class="section flex-column">
@@ -28,11 +28,9 @@
 </section>
 
 <script defer>
-function getContarSilabas(){
-     document.getElementById("contenedor").innerHTML ="";
-    var	http = new XMLHttpRequest(); 
-    http.open("GET","http://127.20.10.10:3000/user/getExercisesByCategory/Cuenta las sílabas",true);    
-    http.send();   
+    function getLectura(){
+    document.getElementById("contenedor").innerHTML ="";
+    var	http = new XMLHttpRequest();    
     http.onreadystatechange = function (){        
 		if (http.readyState == 4 && http.status == 200) {                                    
             var respuesta = JSON.parse(this.responseText);                        
@@ -45,14 +43,12 @@ function getContarSilabas(){
             })                             
         }
     }
-    
+    http.open("GET","http://172.20.10.10:3000/user/getExercisesByCategory/Lecturas",true);    
+    http.send();
 }
 
-getContarSilabas();
-
+getLectura();
 </script>
-
-
 </body>
 
 </html>
