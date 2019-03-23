@@ -1,4 +1,3 @@
-
 *,
 *::after,
 *::before {
@@ -27,23 +26,93 @@ html {
 
 body{
     background-color: var(--blanco);
-    font-family: "Lato", sans-serif;
-}
-.header{
-    width: 100vw;
-    height: 7rem;
-    background-color: green;
-}
-.logo-header{
-    width: 20vw;
-    height: 100%;
-    background-color: var(--negro);
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.lema{
-    width: 80vw;
+.home {
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    z-index: 0;
+}
+
+.header {
+    width: 100%;
+    height: 6rem;
+    background-image: linear-gradient(rgba(250, 112, 112, 0.8), rgba(250, 112, 112, 0.8)), url(../img/pencil.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.logo-header {
+    width: 20%;
     height: 100%;
-    background-color: var(--amarillo);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-header-content{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.menu:hover {
+    transform: translateY(-3px);
+}
+
+.menu-content {
+    display: none;
+}
+
+.titulo-header {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+}
+
+.logo {
+    width: 8rem;
+    height: auto;
+}
+
+.lema-header {
+    width: 15%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.lema {
+    width: 80%;
+    height: 100%;
 }
 
 .container{

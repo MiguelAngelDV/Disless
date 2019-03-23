@@ -62,9 +62,11 @@ body {
     align-items: center;
 }
 
-.logo-header-content {
-    height: 100%;
+.logo-header-content{
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
